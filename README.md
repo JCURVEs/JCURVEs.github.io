@@ -29,20 +29,20 @@ JCURVEs is the public home for Jay Cho, also writing as `@jokerburg.builder`, fo
 
 ```text
 .
-├── ai-report-2026/          # Static report page served from the root source
-├── docs/ai-report-2026/     # Static report page mirrored for docs-source Pages setup
+├── docs/index.html          # Current GitHub Pages homepage
+├── docs/ai-report-2026/     # Static report page
 ├── _posts/                  # Jekyll posts
 ├── _pages/                  # Jekyll pages
 ├── assets/                  # Shared site assets
 └── _config.yml              # Jekyll site configuration
 ```
 
-The report page is mirrored in both `ai-report-2026/` and `docs/ai-report-2026/` because the historical Pages setup may use either root or `docs` as the publishing source.
+The active GitHub Pages publishing source is `docs/`. Root-level static duplicates are intentionally avoided.
 
 ## Publishing Workflow
 
-1. Add or update a static page under a dedicated folder.
-2. Keep page assets local to that folder when possible.
+1. Add or update static pages under `docs/`.
+2. Keep page assets local to the page folder when possible.
 3. Commit to `master`.
 4. Push to GitHub.
 5. Verify the deployed URL on GitHub Pages.
