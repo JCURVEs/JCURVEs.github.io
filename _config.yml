@@ -116,6 +116,9 @@ author:
     - label: "Threads"
       icon: "fas fa-fw fa-link"
       url: "https://www.threads.net/@jokerburg.builder"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jcurves/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/JCURVEs"
@@ -129,6 +132,9 @@ footer:
     - label: "Threads"
       icon: "fas fa-fw fa-link"
       url: "https://www.threads.net/@jokerburg.builder"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jcurves/"
 
 
 # Reading Files
