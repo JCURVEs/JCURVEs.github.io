@@ -6,17 +6,24 @@ Live site: [https://jcurves.github.io/](https://jcurves.github.io/)
 
 ## What This Site Is For
 
-This site is being refocused from a default Jekyll theme fork into a public index for:
+This site is being refocused from a default Jekyll theme fork into a personal brand and public index for:
 
 - AI and automation experiments
 - Technical reports and research notes
 - Smart building, digital twin, and energy infrastructure analysis
 - Personal knowledge-base outputs that are useful enough to publish
 
-## Featured Page
+## Current Position
+
+JCURVEs is the public home for Jay Cho, also writing as `@jokerburg.builder`, focused on AI agents, industrial systems, digital twins, smart buildings, data centers, and knowledge automation.
+
+## Featured Work
+
+- [thread-auto](https://github.com/JCURVEs/thread-auto)  
+  A Python workflow for collecting and organizing daily technology signals for content publishing.
 
 - [AI Report 2026](https://jcurves.github.io/ai-report-2026/)  
-  A graduate-school technical report on the 2020-2026 AI transition, comparing large general-purpose models with lightweight specialized models and connecting the discussion to data centers, energy efficiency, and industrial execution.
+  A technical report on the 2020-2026 AI transition, comparing large general-purpose models with lightweight specialized models and connecting the discussion to data centers, energy efficiency, and industrial execution.
 
 ## Repository Structure
 

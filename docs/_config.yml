@@ -87,7 +87,6 @@ social:
     - "https://github.com/JCURVEs"
     - "https://jcurves.github.io/"
     - "https://www.threads.net/@jokerburg.builder"
-    - "https://jcurveworld.tistory.com/"
 
 # Analytics
 analytics:
@@ -110,9 +109,6 @@ author:
     - label: "Threads"
       icon: "fas fa-fw fa-link"
       url: "https://www.threads.net/@jokerburg.builder"
-    - label: "Tistory"
-      icon: "fas fa-fw fa-link"
-      url: "https://jcurveworld.tistory.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/JCURVEs"
@@ -127,9 +123,6 @@ footer:
     - label: "Threads"
       icon: "fas fa-fw fa-link"
       url: "https://www.threads.net/@jokerburg.builder"
-    - label: "Tistory"
-      icon: "fas fa-fw fa-link"
-      url: "https://jcurveworld.tistory.com/"
 
 
 # Reading Files
