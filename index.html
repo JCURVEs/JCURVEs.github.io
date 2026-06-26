@@ -1,4 +1,393 @@
----
-layout: home
-author_profile: true
----
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JCURVEs - AI, industrial systems, and knowledge automation</title>
+  <meta name="description" content="Jay Cho's technical space for AI agents, industrial systems, smart buildings, digital twins, energy infrastructure, and knowledge automation.">
+  <meta property="og:title" content="JCURVEs">
+  <meta property="og:description" content="AI, industrial systems, and knowledge automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jcurves.github.io/">
+  <meta property="og:image" content="https://jcurves.github.io/ai-report-2026/assets/epoch-ai-training-compute-2020-2026.png">
+  <style>
+    :root {
+      --bg: #fbfaf7;
+      --fg: #111111;
+      --muted: #5f625d;
+      --line: #dedbd2;
+      --soft: #f0eee7;
+      --accent: #0f8f72;
+      --accent-2: #b76e2d;
+      --max: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: Inter, "Malgun Gothic", "Apple SD Gothic Neo", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.62;
+      letter-spacing: 0;
+    }
+    a { color: inherit; text-decoration: none; }
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      border-bottom: 1px solid rgba(17, 17, 17, .12);
+      background: rgba(251, 250, 247, .86);
+      backdrop-filter: blur(14px);
+    }
+    .nav {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand {
+      font-weight: 760;
+      font-size: 16px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 14px;
+      color: #333;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .hero {
+      min-height: 82vh;
+      display: flex;
+      align-items: center;
+      padding: 104px 22px 64px;
+      background:
+        linear-gradient(90deg, rgba(251, 250, 247, .96) 0%, rgba(251, 250, 247, .88) 47%, rgba(251, 250, 247, .48) 100%),
+        url("ai-report-2026/assets/epoch-ai-training-compute-2020-2026.png");
+      background-size: cover;
+      background-position: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 760;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+    h1 {
+      max-width: 760px;
+      margin: 0;
+      font-size: clamp(44px, 8vw, 86px);
+      line-height: 1.02;
+      font-weight: 780;
+      letter-spacing: 0;
+    }
+    .hero-copy {
+      max-width: 650px;
+      margin: 24px 0 0;
+      color: #2d302c;
+      font-size: clamp(18px, 2.3vw, 24px);
+      line-height: 1.5;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 10px 15px;
+      border: 1px solid var(--fg);
+      border-radius: 4px;
+      background: var(--fg);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .button.secondary {
+      background: rgba(251, 250, 247, .82);
+      color: var(--fg);
+    }
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, .12);
+    }
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 52px 22px 92px;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+      gap: 42px;
+      align-items: end;
+      margin: 20px 0 28px;
+    }
+    h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.1;
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .project-card {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+    .project-card img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      background: var(--soft);
+    }
+    .project-body {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .tag {
+      width: fit-content;
+      border: 1px solid rgba(15, 143, 114, .32);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 2px 8px;
+      font-size: 12px;
+      font-weight: 740;
+    }
+    h3 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    .project-body p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      flex: 1;
+    }
+    .text-link {
+      color: var(--fg);
+      font-size: 14px;
+      font-weight: 740;
+      border-bottom: 1px solid rgba(17, 17, 17, .28);
+      width: fit-content;
+    }
+    .text-link:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .focus-band {
+      margin-top: 56px;
+      border-top: 1px solid var(--fg);
+      border-bottom: 1px solid var(--line);
+      padding: 30px 0;
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 44px;
+    }
+    .focus-band p {
+      margin: 0;
+      color: #30332f;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+    .focus-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-content: start;
+    }
+    .focus-item {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, .62);
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .notes {
+      margin-top: 56px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .note {
+      border-top: 1px solid var(--line);
+      padding-top: 16px;
+    }
+    .note h3 { font-size: 18px; }
+    .note p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    footer {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 24px 22px 42px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--line);
+    }
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .hero {
+        min-height: 78vh;
+        background:
+          linear-gradient(180deg, rgba(251, 250, 247, .96) 0%, rgba(251, 250, 247, .88) 62%, rgba(251, 250, 247, .58) 100%),
+          url("ai-report-2026/assets/epoch-ai-training-compute-2020-2026.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .section-head,
+      .focus-band,
+      .project-grid,
+      .notes {
+        grid-template-columns: 1fr;
+      }
+      .focus-list { grid-template-columns: 1fr; }
+      main { padding-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="/">JCURVEs</a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#focus">Focus</a>
+        <a href="https://github.com/JCURVEs">GitHub</a>
+        <a href="https://www.threads.net/@jokerburg.builder">Threads</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">AI · Industrial Systems · Knowledge Automation</div>
+      <h1>Turning technical signals into working knowledge.</h1>
+      <p class="hero-copy">
+        I study and build around AI agents, smart buildings, digital twins, data centers, and energy infrastructure. This site is my public index of reports, experiments, and reusable thinking.
+      </p>
+      <div class="actions" aria-label="Primary links">
+        <a class="button" href="/ai-report-2026/">Read AI Report 2026</a>
+        <a class="button secondary" href="https://github.com/JCURVEs">View GitHub</a>
+        <a class="button secondary" href="https://jcurveworld.tistory.com/">Visit Tistory</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="work">
+      <div class="section-head">
+        <h2>Published Work</h2>
+        <p>Selected outputs that show where my interests are moving: from AI model capability toward infrastructure, operations, and practical automation.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="ai-report-2026/assets/epoch-ai-training-compute-2020-2026.png" alt="Epoch AI model training compute trend chart">
+          <div class="project-body">
+            <span class="tag">Report</span>
+            <h3>AI Report 2026</h3>
+            <p>A technical report on the 2020-2026 AI transition, comparing large general-purpose models with lightweight specialized models.</p>
+            <a class="text-link" href="/ai-report-2026/">Open report</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="ai-report-2026/assets/monthly-spending-data-center-us.png" alt="Our World in Data chart on monthly data center construction spending">
+          <div class="project-body">
+            <span class="tag">Infrastructure</span>
+            <h3>AI and Data Centers</h3>
+            <p>Notes on why AI competition is becoming a question of compute, capital expenditure, power, cooling, and operational efficiency.</p>
+            <a class="text-link" href="/ai-report-2026/#section-3">Read section</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="ai-report-2026/assets/global-data-centre-electricity-consumption-by-equipment.png" alt="IEA global data centre electricity consumption chart">
+          <div class="project-body">
+            <span class="tag">Automation</span>
+            <h3>thread-auto</h3>
+            <p>A Python workflow for collecting daily technology signals and turning them into publishable content ideas.</p>
+            <a class="text-link" href="https://github.com/JCURVEs/thread-auto">View repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="focus" class="focus-band">
+      <p>
+        My current question is simple: how does AI become useful inside real operating environments, not only demos? I care about the layer where models meet buildings, energy systems, workflows, and domain experts.
+      </p>
+      <div class="focus-list">
+        <div class="focus-item">AI agents</div>
+        <div class="focus-item">Smart buildings</div>
+        <div class="focus-item">Digital twins</div>
+        <div class="focus-item">BEMS and energy</div>
+        <div class="focus-item">Data centers</div>
+        <div class="focus-item">Knowledge systems</div>
+      </div>
+    </section>
+
+    <section class="notes" aria-label="More links">
+      <article class="note">
+        <h3>GitHub</h3>
+        <p>Code, static reports, and experiments live under the JCURVEs account.</p>
+        <a class="text-link" href="https://github.com/JCURVEs">github.com/JCURVEs</a>
+      </article>
+      <article class="note">
+        <h3>Threads</h3>
+        <p>Short-form technology signals and builder notes are posted as @jokerburg.builder.</p>
+        <a class="text-link" href="https://www.threads.net/@jokerburg.builder">Open Threads</a>
+      </article>
+      <article class="note">
+        <h3>Tistory</h3>
+        <p>Longer Korean writing and archive-style posts live on my Tistory blog.</p>
+        <a class="text-link" href="https://jcurveworld.tistory.com/">Open blog</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <span>JCURVEs · Jay Cho · Updated 2026</span>
+  </footer>
+</body>
+</html>
