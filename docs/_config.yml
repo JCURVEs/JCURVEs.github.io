@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+﻿# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your entire site, values
 # which you are expected to set up once and rarely need to edit after that.
@@ -87,7 +87,7 @@ social:
     - "https://github.com/JCURVEs"
     - "https://jcurves.github.io/"
     - "https://www.threads.net/@jokerburg.builder"
-    - "https://www.linkedin.com/in/jcurves/"
+    - "https://www.linkedin.com/in/jay2cho/"
 
 # Analytics
 analytics:
@@ -112,7 +112,7 @@ author:
       url: "https://www.threads.net/@jokerburg.builder"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/jcurves/"
+      url: "https://www.linkedin.com/in/jay2cho/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/JCURVEs"
@@ -129,7 +129,7 @@ footer:
       url: "https://www.threads.net/@jokerburg.builder"
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/jcurves/"
+      url: "https://www.linkedin.com/in/jay2cho/"
 
 
 # Reading Files
@@ -330,3 +330,4 @@ compress_html:
   clippings: all
   ignore:
     envs: development
+
