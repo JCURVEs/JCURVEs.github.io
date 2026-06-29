@@ -19,11 +19,14 @@ JCURVEs is the public home for Jay Cho, also writing as `@jokerburg.builder`, fo
 
 ## Featured Work
 
+- [meta-wearable-glasses-for-research](https://github.com/JCURVEs/meta-wearable-glasses-for-research)  
+  ElderGlass: a senior-focused AI smart-glasses safety assistant system.
+
+- [siemens-valve-selector](https://github.com/JCURVEs/siemens-valve-selector)  
+  A practical selector tool for Siemens valve workflows and engineering support.
+
 - [thread-auto](https://github.com/JCURVEs/thread-auto)  
   A Python workflow for collecting and organizing daily technology signals for content publishing.
-
-- [AI Report 2026](https://jcurves.github.io/ai-report-2026/)  
-  A technical report on the 2020-2026 AI transition, comparing large general-purpose models with lightweight specialized models and connecting the discussion to data centers, energy efficiency, and industrial execution.
 
 ## Repository Structure
 
